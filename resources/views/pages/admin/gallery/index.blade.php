@@ -18,7 +18,7 @@
                     <thead>
                         <tr>
                             <td>ID</td>
-                            <td>Travel</td>
+                            <td>Ticket</td>
                             <td>Gambar</td>
                             <td>Action</td>
                         </tr>
@@ -27,7 +27,7 @@
                         @forelse ($items as $item)
                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->travel_package->title}}</td>
+                            <td>{{$item->ticket_package->title}}</td>
                             <td>
                                 <img src="{{Storage::url($item->image)}}" alt="" style="width:150px"
                                     class="img-thumbnail" />

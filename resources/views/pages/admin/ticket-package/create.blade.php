@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah Paket Travel</h1>
+        <h1 class="h3 mb-0 text-gray-800">Tambah Paket Tiket</h1>
     </div>
 
     @if ($errors->any())
@@ -20,7 +20,7 @@
 
     <div class="csrd shadow">
         <div class="card-body">
-            <form action="{{route('travel-package.store')}}" method="POST">
+            <form action="{{route('ticket-package.store')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -36,23 +36,13 @@
                     <textarea name="about" rows="10" class="d-block w-100 form-control">{{old('about')}}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="featured_event">Featured Event</label>
-                    <input type="text" class="form-control" name="featured_event" placeholder="Featured Event"
-                        value="{{old('featured_event')}}">
-                </div>
-                <div class="form-group">
                     <label for="language">Language</label>
                     <input type="text" class="form-control" name="language" placeholder="Language"
                         value="{{old('language')}}">
                 </div>
                 <div class="form-group">
-                    <label for="foods">Foods</label>
-                    <input type="text" class="form-control" name="foods" placeholder="Foods" value="{{old('foods')}}">
-                </div>
-                <div class="form-group">
-                    <label for="departure_date">Departure Date</label>
-                    <input type="date" class="form-control" name="departure_date" placeholder="Departure Date"
-                        value="{{old('departure_date')}}">
+                    <label for="departure_date">Date</label>
+                    <input type="date" class="form-control" name="date" placeholder="Date" value="{{old('date')}}">
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration</label>

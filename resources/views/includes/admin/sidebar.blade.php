@@ -16,16 +16,14 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" {{-- href="{{route ('travel-package.index')}} --}}
-
-        >
+        <a class="nav-link" href="{{route ('ticket-package.index')}}">
             <i class=" fas fa-fw fa-hotel"></i>
-            <span>Paket Travel</span></a>
+            <span>Paket Ticket</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" {{-- href="{{route ('gallery.index')}}
-        " --}}>
+        <a class="nav-link" href="{{route ('gallery.index')}}
+        ">
             <i class="fas fa-fw fa-images"></i>
             <span>Gallery Tiket</span></a>
     </li>

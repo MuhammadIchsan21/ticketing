@@ -5,9 +5,9 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Paket Travel</h1>
-        <a href="{{route('travel-package.create')}}" class="btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Paket Travel
+        <h1 class="h3 mb-0 text-gray-800">Ticket</h1>
+        <a href="{{route('ticket-package.create')}}" class="btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Ticket
         </a>
     </div>
 
@@ -20,8 +20,7 @@
                             <td>id</td>
                             <td>title</td>
                             <td>location</td>
-                            <td>type</td>
-                            <td>departure date</td>
+                            <td>date</td>
                             <td>type</td>
                             <td>Action</td>
                         </tr>
@@ -32,14 +31,13 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->title}}</td>
                             <td>{{$item->location}}</td>
-                            <td>{{$item->type}}</td>
-                            <td>{{$item->departure_date}}</td>
+                            <td>{{$item->date}}</td>
                             <td>{{$item->type}}</td>
                             <td>
-                                <a href="{{route('travel-package.edit', $item->id)}}" class="btn btn-info">
+                                <a href="{{route('ticket-package.edit', $item->id)}}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form action="{{route('travel-package.destroy', $item->id)}}" method="POST"
+                                <form action="{{route('ticket-package.destroy', $item->id)}}" method="POST"
                                     class="d-inline">
                                     @csrf
                                     @method('delete')

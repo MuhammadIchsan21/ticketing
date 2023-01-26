@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\TicketPackageController;
+use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
@@ -30,8 +33,11 @@ Route::get('/checkout', [CheckoutController::class, 'index'])
         ->name('checkout');
 
 Route::prefix('admin')
-        ->namespace('admin')
         ->group(function(){
             Route::get('/', [DashboardController::class, 'index'])
             ->name('dashboard');
+
+            Route::resource('ticket-package', TicketPackageController::class);
+            Route::resource('gallery', GalleryController::class);
+            Route::resource('transaction', TransactionController::class);
         });

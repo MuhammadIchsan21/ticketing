@@ -24,12 +24,12 @@
                 @method('PUT')
                 @csrf
                 <div class="form-group">
-                    <label for="travel_packages_id">Paket Travel</label>
-                    <select name="travel_packages_id" required class="form-control">
-                        <option value="{{ $item->travel_packages_id }}">Jangan Diubah</option>
-                        @foreach ($travel_packages as $travel_package)
-                        <option value="{{$travel_package->id}}">
-                            {{$travel_package->title}}
+                    <label for="ticket_packages_id">Paket ticket</label>
+                    <select name="ticket_packages_id" required class="form-control">
+                        <option value="{{ $item->ticket_packages_id }}">Jangan Diubah</option>
+                        @foreach ($ticket_packages as $ticket_package)
+                        <option value="{{$ticket_package->id}}">
+                            {{$ticket_package->title}}
                         </option>
                         @endforeach
                     </select>

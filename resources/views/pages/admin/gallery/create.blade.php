@@ -23,12 +23,12 @@
             <form action="{{route('gallery.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="travel_packages_id">Paket Travel</label>
-                    <select name="travel_packages_id" required class="form-control">
-                        <option value="">Pilih Paket Travel</option>
-                        @foreach ($travel_packages as $travel_package)
-                        <option value="{{$travel_package->id}}">
-                            {{$travel_package->title}}
+                    <label for="ticket_packages_id">Paket ticket</label>
+                    <select name="ticket_packages_id" required class="form-control">
+                        <option value="">Pilih Paket ticket</option>
+                        @foreach ($ticket_packages as $ticket_package)
+                        <option value="{{$ticket_package->id}}">
+                            {{$ticket_package->title}}
                         </option>
                         @endforeach
                     </select>
